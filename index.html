@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="listado"></div>
+    <script>
+        function CalcularSuperficie(ancho,alto) {
+            var resultado=ancho*alto;
+            return resultado;
+        }
+        function CalcularTerreno() {
+            var inputAncho=prompt('Ingresar el ancho del terreno');
+            var inputAlto=prompt('Ingresar el alto de terrenos en meros');
+            var superficieTerreno=CalcularSuperficie(inputAncho,inputAlto);
+            alert('La superficie de terreno es:'+superficieTerreno);
+        }
+        CalcularTerreno();
+        //suma de numeros pares
+        //projecteuler.net
+        var suma=0;
+        for(var i=0;i<=10;i++){
+            if (i % 2==0) {
+                suma=suma+i;
+                console.log(i);
+            }
+        }
+        console.log(suma);
+        //array y matrices
+        var nombres=[];
+        i=1;
+        while(i<=3){
+            nombres.push(prompt('Ingresar el'+i+'nombre: '));
+            i++;
+        } 
+        console.log(nombres);
+        var listado=document.getElementById('listado')
+        var html="";
+        debugger;
+        for(var nombre of nombres){
+            console.log(nombre);
+            html+=nombre+'<br/>'
+        }
+        listado.innerHTML=html;
+    </script>
+</body>
+</html>
